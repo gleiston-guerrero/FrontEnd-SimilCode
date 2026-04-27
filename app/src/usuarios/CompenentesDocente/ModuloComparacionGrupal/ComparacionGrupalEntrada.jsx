@@ -458,6 +458,8 @@ const CodeComparisonGroupInput = ({ model, onBack, userProfile, refreshComparaci
                 codigos_mas_similares: iaData.codigos_mas_similares,
                 matriz_similitud: iaData.matriz_similitud,
                 matriz_tabla: iaData.matriz_tabla,
+
+                codigo_base: iaData.codigo_base || null,
                 
                 // Metadatos del análisis
                 tokens_usados: iaData.tokens_usados,

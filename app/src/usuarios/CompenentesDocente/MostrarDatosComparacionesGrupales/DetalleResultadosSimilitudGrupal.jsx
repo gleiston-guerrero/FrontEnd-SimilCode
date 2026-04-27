@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Typography, Table, Tag, Alert, Spin, notification } from 'antd';
-import { FireOutlined, CheckCircleOutlined, InfoCircleOutlined, WarningOutlined } from '@ant-design/icons';
+import { FireOutlined, CheckCircleOutlined, InfoCircleOutlined, WarningOutlined, ThunderboltOutlined } from '@ant-design/icons';
+import Editor from '@monaco-editor/react';
 import { API_ENDPOINTS, getStoredToken, buildApiUrlWithId } from '../../../../config';
 import '../../Estilos/Css_Comparacion_Grupal/CodeComparisonGroupResults.css';
 
 const { Title, Text, Paragraph } = Typography;
+
+const monacoLangMap = {
+    'python': 'python',
+    'javascript': 'javascript',
+    'typescript': 'typescript',
+    'java': 'java',
+    'cpp': 'cpp',
+    'c++': 'cpp',
+    'csharp': 'csharp',
+    'c#': 'csharp',
+    'go': 'go',
+    'rust': 'rust',
+    'html': 'html',
+    'css': 'css',
+    'json': 'json',
+    'sql': 'sql'
+};
 
 const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
     const [result, setResult] = useState(null);
@@ -98,9 +116,9 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
             'baja': { color: 'green', icon: <CheckCircleOutlined />, text: 'Baja' },
             'muy_baja': { color: 'blue', icon: <CheckCircleOutlined />, text: 'Muy Baja' }
         };
-        
+
         const config = configs[nivel] || configs['muy_baja'];
-        
+
         return (
             <Tag color={config.color} icon={config.icon}>
                 {similitud}% - {config.text}
@@ -114,7 +132,7 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
         }
 
         const codigosMap = new Map();
-        
+
         result.matriz_similitud.forEach(item => {
             if (!codigosMap.has(item.orden_a)) {
                 codigosMap.set(item.orden_a, {
@@ -137,16 +155,16 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
         if (!result?.matriz_tabla || codigos.length === 0) {
             return [];
         }
-        
+
         const tableData = [];
-        
+
         codigos.forEach((codigoA, indexA) => {
             const row = {
                 key: `row_${indexA}`,
                 codigo: codigoA.nombre_archivo,
                 orden: codigoA.orden
             };
-            
+
             codigos.forEach((codigoB, indexB) => {
                 if (indexA === indexB) {
                     row[`col_${indexB}`] = { similitud: '-', nivel: null };
@@ -156,10 +174,10 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                     row[`col_${indexB}`] = data || { similitud: 0, nivel: 'muy_baja' };
                 }
             });
-            
+
             tableData.push(row);
         });
-        
+
         return tableData;
     };
 
@@ -184,7 +202,7 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                 )
             }
         ];
-        
+
         codigos.forEach((codigo, index) => {
             columns.push({
                 title: codigo.nombre_archivo,
@@ -204,15 +222,15 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                         );
                     }
                     return (
-                        <div 
+                        <div
                             className={`similarity-cell ${data.nivel || 'muy_baja'}`}
-                            style={{ 
+                            style={{
                                 background: `${getNivelColor(data.nivel)}20`,
                                 borderLeft: `3px solid ${getNivelColor(data.nivel)}`
                             }}
                         >
-                            <Text 
-                                strong 
+                            <Text
+                                strong
                                 className="similarity-value"
                                 style={{ color: getNivelColor(data.nivel) }}
                             >
@@ -223,7 +241,7 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                 }
             });
         });
-        
+
         return columns;
     };
 
@@ -264,11 +282,82 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
     const matrizData = buildMatrizTable(codigos);
     const matrizColumns = buildMatrizColumns(codigos);
 
-    const haySimilitudes = result.codigos_mas_similares && 
-                          result.codigos_mas_similares.length > 0;
+    const haySimilitudes = result.codigos_mas_similares &&
+        result.codigos_mas_similares.length > 0;
+
+    // Datos del código base que viene en la respuesta de la IA
+    const codigoBase = result.codigo_base || null;
 
     return (
         <div className="results-container">
+
+            {/* ── CÓDIGO BASE DE REFERENCIA ── */}
+            {codigoBase && (
+                <Card className="results-card" style={{ marginBottom: '16px' }}>
+                    <div className="card-header" style={{ marginBottom: '10px' }}>
+                        <ThunderboltOutlined style={{ color: '#667eea', fontSize: '20px' }} />
+                        <Title level={4} className="card-title" style={{ margin: '0 0 0 10px' }}>
+                            Código Base de Referencia
+                        </Title>
+                    </div>
+
+                    <Paragraph style={{ color: '#808080', fontSize: '13px', marginBottom: '12px' }}>
+                        {codigoBase.descripcion || 'Solución estándar canónica del problema detectado.'}
+                    </Paragraph>
+
+                    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid #333' }}>
+                        {/* Header del editor */}
+                        <div style={{
+                            background: '#1a1a2e',
+                            padding: '8px 16px',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            borderBottom: '1px solid #333'
+                        }}>
+                            <span style={{
+                                color: '#667eea',
+                                fontSize: '12px',
+                                fontWeight: '600',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.5px'
+                            }}>
+                                {codigoBase.lenguaje || 'código'}
+                            </span>
+                            <span style={{ color: '#555', fontSize: '11px' }}>
+                                Solo lectura · Referencia canónica
+                            </span>
+                        </div>
+
+                        {/* Monaco en modo lectura */}
+                        <Editor
+                            height="280px"
+                            language={monacoLangMap[codigoBase.lenguaje?.toLowerCase()] || 'plaintext'}
+                            value={codigoBase.codigo}
+                            theme="vs-dark"
+                            options={{
+                                readOnly: true,
+                                domReadOnly: true,
+                                minimap: { enabled: false },
+                                fontSize: 13,
+                                lineNumbers: 'on',
+                                scrollBeyondLastLine: false,
+                                automaticLayout: true,
+                                wordWrap: 'on',
+                                cursorStyle: 'line',
+                                renderLineHighlight: 'none',
+                                contextmenu: false,
+                                scrollbar: {
+                                    verticalScrollbarSize: 6,
+                                    horizontalScrollbarSize: 6
+                                }
+                            }}
+                        />
+                    </div>
+                </Card>
+            )}
+
+            {/* Resumen General */}
             {result.resumen_general && (
                 <Card className="results-card resumen-card">
                     <div className="card-header">
@@ -281,12 +370,13 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                 </Card>
             )}
 
+            {/* Códigos Más Similares */}
             <Card className="results-card similares-card">
                 <div className="card-header">
                     <span className="card-icon">🔥</span>
                     <Title level={4} className="card-title">Códigos Más Similares</Title>
                 </div>
-                
+
                 {haySimilitudes ? (
                     <div className="similares-list">
                         {result.codigos_mas_similares.map((item, index) => (
@@ -303,7 +393,7 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                                     <div className="similar-tag-wrapper">
                                         {getNivelTag(
                                             item.similitud >= 91 ? 'muy_alta' :
-                                            item.similitud >= 70 ? 'alta' : 'media',
+                                                item.similitud >= 70 ? 'alta' : 'media',
                                             item.similitud
                                         )}
                                     </div>
@@ -322,6 +412,7 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                 )}
             </Card>
 
+            {/* Matriz de Similitud */}
             {codigos.length > 0 && (
                 <Card className="results-card matriz-card">
                     <div className="card-header">
@@ -330,7 +421,7 @@ const CodeComparisonGroupResultsDetail = ({ comparacionId, model }) => {
                             Matriz de Similitud Completa ({codigos.length} códigos)
                         </Title>
                     </div>
-                    
+
                     <div className="legend-container">
                         <Tag color="red" icon={<FireOutlined />} className="legend-tag">
                             91-100% Muy Alta
