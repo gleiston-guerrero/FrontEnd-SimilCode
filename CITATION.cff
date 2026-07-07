@@ -1,0 +1,130 @@
+# This CITATION.cff file was generated in accordance with
+# Citation File Format 1.2.0 (https://citation-file-format.github.io).
+# Zenodo reads this file automatically when minting a DOI upon a GitHub release,
+# and GitHub renders a "Cite this repository" button in the sidebar.
+
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software itself (using the metadata below) and the accompanying peer-reviewed paper (see 'preferred-citation')."
+type: software
+title: "SimilCode Frontend"
+abstract: >
+  React 18.2 web interface for the SimilCode source-code similarity
+  analysis system. Provides the instructor-facing workflow for
+  submitting code pairs, selecting the analysis model (Claude Opus 4.1,
+  GPT-5, Gemini 2.5 Pro, or DeepSeek-V3), and consuming multidimensional
+  similarity scores, human-readable justifications, and Big O
+  complexity estimates returned by the backend API. Designed as a
+  screening aid for academic-integrity workflows in resource-constrained
+  higher-education institutions. Supported source languages in this
+  release: C# and Java.
+version: 1.0.0
+date-released: "2026-07-07"
+license: MIT
+repository-code: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
+url: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
+keywords:
+  - source-code similarity
+  - academic integrity
+  - plagiarism detection
+  - large language models
+  - LLM
+  - programming education
+  - Big O complexity
+  - screening tool
+  - React
+  - JavaScript
+  - web application
+  - Claude
+  - GPT-5
+  - Gemini
+  - DeepSeek
+
+authors:
+  - given-names: "Rafael Alexander"
+    family-names: "Navas Rivera"
+    email: "rafael.navas2017@uteq.edu.ec"
+    # ORCID pending user visual confirmation at https://orcid.org/0009-0005-7926-2648
+    # Replace the line below with:  orcid: "https://orcid.org/0009-0005-7926-2648"
+    # once the profile page displays "Rafael Alexander Navas Rivera".
+    orcid: "TO-BE-CONFIRMED-NAVAS"
+    affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
+
+  - given-names: "Gleiston Cicerón"
+    family-names: "Guerrero-Ulloa"
+    email: "gguerrero@uteq.edu.ec"
+    orcid: "https://orcid.org/0000-0001-5990-2357"
+    affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
+
+  - given-names: "Efraín"
+    family-names: "Díaz-Macías"
+    email: "efraindiaz@uteq.edu.ec"
+    orcid: "https://orcid.org/0000-0003-4087-029X"
+    affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
+
+  - given-names: "Miguel J."
+    family-names: "Hornos"
+    email: "mhornos@ugr.es"
+    orcid: "https://orcid.org/0000-0001-5722-9816"
+    affiliation: "Department of Software Engineering, E.T.S. de Ingenierías Informática y de Telecomunicación, Universidad de Granada (UGR), Granada, Spain"
+
+  - given-names: "Carlos"
+    family-names: "Rodríguez-Domínguez"
+    email: "carlosrodriguez@ugr.es"
+    orcid: "https://orcid.org/0000-0001-5626-3115"
+    affiliation: "Department of Software Engineering, E.T.S. de Ingenierías Informática y de Telecomunicación, Universidad de Granada (UGR), Granada, Spain"
+
+preferred-citation:
+  type: article
+  title: "A controlled within-subjects benchmark of commercial large language models as source-code similarity analysts, with an integrated screening tool for academic-integrity workflows"
+  authors:
+    - given-names: "Rafael Alexander"
+      family-names: "Navas Rivera"
+      orcid: "TO-BE-CONFIRMED-NAVAS"
+      affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
+    - given-names: "Gleiston Cicerón"
+      family-names: "Guerrero-Ulloa"
+      orcid: "https://orcid.org/0000-0001-5990-2357"
+      affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
+    - given-names: "Efraín"
+      family-names: "Díaz-Macías"
+      orcid: "https://orcid.org/0000-0003-4087-029X"
+      affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
+    - given-names: "Miguel J."
+      family-names: "Hornos"
+      orcid: "https://orcid.org/0000-0001-5722-9816"
+      affiliation: "Universidad de Granada, Spain"
+    - given-names: "Carlos"
+      family-names: "Rodríguez-Domínguez"
+      orcid: "https://orcid.org/0000-0001-5626-3115"
+      affiliation: "Universidad de Granada, Spain"
+  journal: "International Journal for Educational Integrity"
+  year: 2026
+  publisher:
+    name: "Springer Nature"
+  notes: "Manuscript under peer review; DOI will be inserted upon acceptance."
+
+identifiers:
+  - type: url
+    value: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
+    description: "Canonical repository of the SimilCode frontend"
+  # Once Zenodo mints the DOI upon the first GitHub release, add:
+  # - type: doi
+  #   value: "10.5281/zenodo.YYYYYYY"
+  #   description: "Zenodo archive of SimilCode Frontend v1.0.0"
+
+references:
+  - type: software
+    title: "SimilCode Backend"
+    authors:
+      - given-names: "Rafael Alexander"
+        family-names: "Navas Rivera"
+      - given-names: "Gleiston Cicerón"
+        family-names: "Guerrero-Ulloa"
+      - given-names: "Efraín"
+        family-names: "Díaz-Macías"
+      - given-names: "Miguel J."
+        family-names: "Hornos"
+      - given-names: "Carlos"
+        family-names: "Rodríguez-Domínguez"
+    repository-code: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
+    notes: "REST API consumed by this frontend."
