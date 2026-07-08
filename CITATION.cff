@@ -6,19 +6,22 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite both the software itself (using the metadata below) and the accompanying peer-reviewed paper (see 'preferred-citation')."
 type: software
-title: "SimilCode Backend"
+title: "SimilCode Frontend"
 abstract: >
-  REST API for source-code similarity analysis and Big O complexity
-  estimation, powered by four commercial large language models used as
-  similarity analysts (Claude Opus 4.1, GPT-5, Gemini 2.5 Pro, DeepSeek-V3).
-  Designed as a screening aid for academic-integrity workflows in
-  resource-constrained higher-education institutions. Supported source
-  languages in this release: C# and Java.
+  React 18.2 web interface for the SimilCode source-code similarity
+  analysis system. Provides the instructor-facing workflow for
+  submitting code pairs, selecting the analysis model (Claude Opus 4.1,
+  GPT-5, Gemini 2.5 Pro, or DeepSeek-V3), and consuming multidimensional
+  similarity scores, human-readable justifications, and Big O
+  complexity estimates returned by the backend API. Designed as a
+  screening aid for academic-integrity workflows in resource-constrained
+  higher-education institutions. Supported source languages in this
+  release: C# and Java.
 version: 1.0.0
 date-released: "2026-07-07"
 license: MIT
-repository-code: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
-url: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
+repository-code: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
+url: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
 keywords:
   - source-code similarity
   - academic integrity
@@ -28,8 +31,9 @@ keywords:
   - programming education
   - Big O complexity
   - screening tool
-  - Django
-  - REST API
+  - React
+  - JavaScript
+  - web application
   - Claude
   - GPT-5
   - Gemini
@@ -98,9 +102,9 @@ preferred-citation:
 
 identifiers:
   - type: url
-    value: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
-    description: "Canonical repository of the SimilCode backend"
+    value: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
+    description: "Canonical repository of the SimilCode frontend"
   # Once Zenodo mints the DOI upon the first GitHub release, add:
   # - type: doi
-  #   value: "10.5281/zenodo.XXXXXXX"
-  #   description: "Zenodo archive of SimilCode Backend v1.0.0"
+  #   value: "10.5281/zenodo.YYYYYYY"
+  #   description: "Zenodo archive of SimilCode Frontend v1.0.0"
