@@ -105,6 +105,6 @@ identifiers:
     value: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
     description: "Canonical repository of the SimilCode frontend"
   # Once Zenodo mints the DOI upon the first GitHub release, add:
-  # - type: doi
-  #   value: "10.5281/zenodo.YYYYYYY"
-  #   description: "Zenodo archive of SimilCode Frontend v1.0.0"
+    - type: doi
+      value: "10.5281/zenodo.21265976"
+      description: "Zenodo archive of SimilCode Frontend v1.0.0"
