@@ -6,22 +6,19 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite both the software itself (using the metadata below) and the accompanying peer-reviewed paper (see 'preferred-citation')."
 type: software
-title: "SimilCode Frontend"
+title: "SimilCode Backend"
 abstract: >
-  React 18.2 web interface for the SimilCode source-code similarity
-  analysis system. Provides the instructor-facing workflow for
-  submitting code pairs, selecting the analysis model (Claude Opus 4.1,
-  GPT-5, Gemini 2.5 Pro, or DeepSeek-V3), and consuming multidimensional
-  similarity scores, human-readable justifications, and Big O
-  complexity estimates returned by the backend API. Designed as a
-  screening aid for academic-integrity workflows in resource-constrained
-  higher-education institutions. Supported source languages in this
-  release: C# and Java.
+  REST API for source-code similarity analysis and Big O complexity
+  estimation, powered by four commercial large language models used as
+  similarity analysts (Claude Opus 4.1, GPT-5, Gemini 2.5 Pro, DeepSeek-V3).
+  Designed as a screening aid for academic-integrity workflows in
+  resource-constrained higher-education institutions. Supported source
+  languages in this release: C# and Java.
 version: 1.0.0
 date-released: "2026-07-07"
 license: MIT
-repository-code: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
-url: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
+repository-code: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
+url: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
 keywords:
   - source-code similarity
   - academic integrity
@@ -31,9 +28,8 @@ keywords:
   - programming education
   - Big O complexity
   - screening tool
-  - React
-  - JavaScript
-  - web application
+  - Django
+  - REST API
   - Claude
   - GPT-5
   - Gemini
@@ -43,10 +39,7 @@ authors:
   - given-names: "Rafael Alexander"
     family-names: "Navas Rivera"
     email: "rafael.navas2017@uteq.edu.ec"
-    # ORCID pending user visual confirmation at https://orcid.org/0009-0005-7926-2648
-    # Replace the line below with:  orcid: "https://orcid.org/0009-0005-7926-2648"
-    # once the profile page displays "Rafael Alexander Navas Rivera".
-    orcid: "TO-BE-CONFIRMED-NAVAS"
+    orcid: "https://orcid.org/0009-0005-7926-2648"
     affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
 
   - given-names: "Gleiston Cicerón"
@@ -79,7 +72,7 @@ preferred-citation:
   authors:
     - given-names: "Rafael Alexander"
       family-names: "Navas Rivera"
-      orcid: "TO-BE-CONFIRMED-NAVAS"
+      orcid: "https://orcid.org/0009-0005-7926-2648"
       affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
     - given-names: "Gleiston Cicerón"
       family-names: "Guerrero-Ulloa"
@@ -105,26 +98,9 @@ preferred-citation:
 
 identifiers:
   - type: url
-    value: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
-    description: "Canonical repository of the SimilCode frontend"
+    value: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
+    description: "Canonical repository of the SimilCode backend"
   # Once Zenodo mints the DOI upon the first GitHub release, add:
   # - type: doi
-  #   value: "10.5281/zenodo.YYYYYYY"
-  #   description: "Zenodo archive of SimilCode Frontend v1.0.0"
-
-references:
-  - type: software
-    title: "SimilCode Backend"
-    authors:
-      - given-names: "Rafael Alexander"
-        family-names: "Navas Rivera"
-      - given-names: "Gleiston Cicerón"
-        family-names: "Guerrero-Ulloa"
-      - given-names: "Efraín"
-        family-names: "Díaz-Macías"
-      - given-names: "Miguel J."
-        family-names: "Hornos"
-      - given-names: "Carlos"
-        family-names: "Rodríguez-Domínguez"
-    repository-code: "https://github.com/gleiston-guerrero/BackEnd-SimilCode"
-    notes: "REST API consumed by this frontend."
+  #   value: "10.5281/zenodo.XXXXXXX"
+  #   description: "Zenodo archive of SimilCode Backend v1.0.0"
