@@ -17,8 +17,8 @@ abstract: >
   screening aid for academic-integrity workflows in resource-constrained
   higher-education institutions. Supported source languages in this
   release: C# and Java.
-version: 1.0.0
-date-released: "2026-07-07"
+version: 1.0.1
+date-released: "2026-07-08"
 license: MIT
 repository-code: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
 url: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
@@ -122,4 +122,4 @@ identifiers:
     description: "Canonical repository of the SimilCode frontend"
   - type: doi
     value: "10.5281/zenodo.21265977"
-    description: "Zenodo archive of SimilCode Frontend v1.0.0"
+    description: "Zenodo archive of SimilCode Frontend v1.0.1"
