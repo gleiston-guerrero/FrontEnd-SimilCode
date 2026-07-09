@@ -40,35 +40,40 @@ keywords:
   - DeepSeek
 
 authors:
-  - given-names: "Rafael Alexander"
-    family-names: "Navas Rivera"
-    email: "rafael.navas2017@uteq.edu.ec"
-    orcid: "https://orcid.org/0009-0005-7926-2648"
-    affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
-
   - given-names: "Gleiston Cicerón"
     family-names: "Guerrero-Ulloa"
+    # CRediT roles: Conceptualization; Data Curation; Formal Analysis; Methodology; Project Administration; Supervision; Validation; Visualization; Writing – Original Draft; Writing – Review & Editing
     email: "gguerrero@uteq.edu.ec"
     orcid: "https://orcid.org/0000-0001-5990-2357"
     affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
 
+  - given-names: "Rafael Alexander"
+    family-names: "Navas Rivera"
+    # CRediT roles: Conceptualization; Data Curation; Formal Analysis; Methodology; Project Administration; Resources; Software; Visualization; Writing – Original Draft; Writing – Review & Editing
+    email: "rafael.navas2017@uteq.edu.ec"
+    orcid: "https://orcid.org/0009-0005-7926-2648"
+    affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
+
   - given-names: "Efraín"
     family-names: "Díaz-Macías"
+    # CRediT roles: Formal Analysis; Methodology; Project Administration; Resources; Supervision; Validation; Writing – Review & Editing
     email: "efraindiaz@uteq.edu.ec"
     orcid: "https://orcid.org/0000-0003-4087-029X"
     affiliation: "Facultad de Ciencias de la Computación, Universidad Técnica Estatal de Quevedo (UTEQ), Quevedo, Los Ríos, Ecuador"
 
   - given-names: "Miguel J."
     family-names: "Hornos"
+    # CRediT roles: Formal Analysis; Funding Acquisition; Methodology; Project Administration; Resources; Supervision; Validation; Visualization; Writing – Review & Editing
     email: "mhornos@ugr.es"
     orcid: "https://orcid.org/0000-0001-5722-9816"
-    affiliation: "Department of Software Engineering, E.T.S. de Ingenierías Informática y de Telecomunicación, Universidad de Granada (UGR), Granada, Spain"
+    affiliation: "Department of Software Engineering, University of Granada (UGR), Granada, Spain"
 
   - given-names: "Carlos"
     family-names: "Rodríguez-Domínguez"
+    # CRediT roles: Formal Analysis; Funding Acquisition; Methodology; Project Administration; Resources; Supervision; Validation; Visualization; Writing – Review & Editing
     email: "carlosrodriguez@ugr.es"
     orcid: "https://orcid.org/0000-0001-5626-3115"
-    affiliation: "Department of Software Engineering, E.T.S. de Ingenierías Informática y de Telecomunicación, Universidad de Granada (UGR), Granada, Spain"
+    affiliation: "Department of Software Engineering, and Research Center for Information and Communication Technologies (CITIC), University of Granada (UGR), Granada, Spain"
 
 preferred-citation:
   type: article
