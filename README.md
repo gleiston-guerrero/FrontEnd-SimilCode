@@ -24,10 +24,13 @@ The system is designed as a **screening aid** for academic-integrity workflows i
 
 Supported source languages in this release: **C#** and **Java**.
 
-## Related repository
+## Related repositories
 
 The Django/Python REST API consumed by this frontend is available separately:  
-[https://github.com/gleiston-guerrero/BackEnd-SimilCode](https://github.com/gleiston-guerrero/BackEnd-SimilCode)
+<https://github.com/gleiston-guerrero/BackEnd-SimilCode>
+
+The benchmark dataset (120 C# and Java paired code cases) used to evaluate the in the accompanying paper is archived separately:  
+<https://github.com/gleiston-guerrero/SimilCode-Benchmark>
 
 ## Technical stack
 
@@ -102,7 +105,7 @@ FrontEnd-SimilCode/
 If you use SimilCode in your research, please cite both the software and the accompanying paper:
 
 **Software:**
-> Guerrero-Ulloa, G. C., Navas Rivera, R. A., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). *SimilCode Frontend* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21265977
+> Guerrero-Ulloa, G. C., Navas Rivera, R. A., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). *SimilCode Frontend* (Version 1.0.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21265977
 
 **Paper:**
 > Guerrero-Ulloa, G. C., Navas Rivera, R. A., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). SimilCode: A Web Application for Source Code Similarity Detection and Algorithmic Efficiency Analysis using Generative Artificial Intelligence. *International Journal for Educational Integrity* (under review).
