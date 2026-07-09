@@ -75,28 +75,39 @@ authors:
     orcid: "https://orcid.org/0000-0001-5626-3115"
     affiliation: "Department of Software Engineering, and Research Center for Information and Communication Technologies (CITIC), University of Granada (UGR), Granada, Spain"
 
+contact:
+  - given-names: "Carlos"
+    family-names: "Rodríguez-Domínguez"
+    email: "carlosrodriguez@ugr.es"
+    affiliation: "Department of Software Engineering, and Research Center for Information and Communication Technologies (CITIC), University of Granada (UGR), Granada, Spain"
+
 preferred-citation:
   type: article
-  title: "A controlled within-subjects benchmark of commercial large language models as source-code similarity analysts, with an integrated screening tool for academic-integrity workflows"
+  title: "SimilCode: A Web Application for Source Code Similarity Detection and Algorithmic Efficiency Analysis using Generative Artificial Intelligence"
   authors:
-    - given-names: "Rafael Alexander"
-      family-names: "Navas Rivera"
-      orcid: "https://orcid.org/0009-0005-7926-2648"
-      affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
     - given-names: "Gleiston Cicerón"
       family-names: "Guerrero-Ulloa"
+      # CRediT roles: Conceptualization; Data Curation; Formal Analysis; Methodology; Project Administration; Supervision; Validation; Visualization; Writing – Original Draft; Writing – Review & Editing
       orcid: "https://orcid.org/0000-0001-5990-2357"
+      affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
+    - given-names: "Rafael Alexander"
+      family-names: "Navas Rivera"
+      # CRediT roles: Conceptualization; Data Curation; Formal Analysis; Methodology; Project Administration; Resources; Software; Visualization; Writing – Original Draft; Writing – Review & Editing
+      orcid: "https://orcid.org/0009-0005-7926-2648"
       affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
     - given-names: "Efraín"
       family-names: "Díaz-Macías"
+      # CRediT roles: Formal Analysis; Methodology; Project Administration; Resources; Supervision; Validation; Writing – Review & Editing
       orcid: "https://orcid.org/0000-0003-4087-029X"
       affiliation: "Universidad Técnica Estatal de Quevedo, Ecuador"
     - given-names: "Miguel J."
       family-names: "Hornos"
+      # CRediT roles: Formal Analysis; Funding Acquisition; Methodology; Project Administration; Resources; Supervision; Validation; Visualization; Writing – Review & Editing
       orcid: "https://orcid.org/0000-0001-5722-9816"
       affiliation: "Universidad de Granada, Spain"
     - given-names: "Carlos"
       family-names: "Rodríguez-Domínguez"
+      # CRediT roles: Formal Analysis; Funding Acquisition; Methodology; Project Administration; Resources; Supervision; Validation; Visualization; Writing – Review & Editing
       orcid: "https://orcid.org/0000-0001-5626-3115"
       affiliation: "Universidad de Granada, Spain"
   journal: "International Journal for Educational Integrity"
@@ -109,7 +120,6 @@ identifiers:
   - type: url
     value: "https://github.com/gleiston-guerrero/FrontEnd-SimilCode"
     description: "Canonical repository of the SimilCode frontend"
-  # Once Zenodo mints the DOI upon the first GitHub release, add:
-    - type: doi
-      value: "10.5281/zenodo.21265976"
-      description: "Zenodo archive of SimilCode Frontend v1.0.0"
+  - type: doi
+    value: "10.5281/zenodo.21265977"
+    description: "Zenodo archive of SimilCode Frontend v1.0.0"

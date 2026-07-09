@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React 18.2](https://img.shields.io/badge/react-18.2-61DAFB.svg)](https://react.dev/)
 [![Node.js 18+](https://img.shields.io/badge/node.js-18+-339933.svg)](https://nodejs.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21265177.svg)](https://doi.org/10.5281/zenodo.21265177)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21265977.svg)](https://doi.org/10.5281/zenodo.21265977)
 
 ---
 
@@ -102,10 +102,10 @@ FrontEnd-SimilCode/
 If you use SimilCode in your research, please cite both the software and the accompanying paper:
 
 **Software:**
-> Navas Rivera, R. A., Guerrero-Ulloa, G. C., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). *SimilCode Frontend* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21265177
+> Guerrero-Ulloa, G. C., Navas Rivera, R. A., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). *SimilCode Frontend* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21265977
 
 **Paper:**
-> Guerrero-Ulloa, G. C., Navas Rivera, R. A., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). A controlled within-subjects benchmark of commercial large language models as source-code similarity analysts, with an integrated screening tool for academic-integrity workflows. *International Journal for Educational Integrity* (under review).
+> Guerrero-Ulloa, G. C., Navas Rivera, R. A., Díaz-Macías, E., Hornos, M. J., & Rodríguez-Domínguez, C. (2026). SimilCode: A Web Application for Source Code Similarity Detection and Algorithmic Efficiency Analysis using Generative Artificial Intelligence. *International Journal for Educational Integrity* (under review).
 
 A machine-readable `CITATION.cff` file is provided in this repository; GitHub renders a "Cite this repository" button in the sidebar, and Zenodo reads it automatically when minting the DOI.
 
